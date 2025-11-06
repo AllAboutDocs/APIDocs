@@ -1,5 +1,6 @@
-site_name: API Documentation
+site_name: APIDocs
+theme:
+  name: readthedocs
 nav:
   - Home: index.md
   - Introduction: introduction.md
-theme: readthedocs
