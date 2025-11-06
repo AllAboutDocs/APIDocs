@@ -5,10 +5,10 @@ build:
   tools:
     python: "3.12"
 
-mkdocs:
-  configuration: mkdocs.yml
-
 python:
-  version: "3.12"
+  version:
   install:
     - requirements: requirements.txt
+
+mkdocs:
+  configuration: mkdocs.yml
