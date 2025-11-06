@@ -6,7 +6,6 @@ build:
     python: "3.12"
 
 python:
-  version:
   install:
     - requirements: requirements.txt
 
