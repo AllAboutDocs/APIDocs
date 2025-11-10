@@ -15,7 +15,6 @@ STS ensures that the proper authentication and security measures are in place be
 To generate an STS token, perform the following steps:
 
 1. Download `generate_token_prod.sh` for production
-
 2. Save the script locally to the `generate_token.sh` file.
 3. Run `chmod +x ./generate_token_prod.sh`
 4. Copy the `Docs Gateway - STS Client` secret key for the related environment from 1Password and store it in the `sts_private_key.pem` file in the same directory where you stored the script.
