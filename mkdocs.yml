@@ -3,7 +3,7 @@ theme:
   name: readthedocs
   navigation_depth: 2
 nav:
-  - Home: index.md
+  - Global Docs APIs: index.md
   - "Authentication and authorization": authentication-and-authorization.md
   - "Docs Creation and Management APIs":
       - "Overview": docs-creation-and-management-apis/docs-creation-and-management.md
