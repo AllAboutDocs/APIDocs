@@ -4,5 +4,6 @@ theme:
 nav:
   - Home: index.md
   - Authentication and authorization: authentication-and-authorization.md
-  - Docs Creation and Management APIs: docs-creation-and-management.md
-    - Create a new doc: docs-creation-and-management.md
+  - Docs Creation and Management APIs:
+      - Docs creation and management APIs: docs-creation-and-management.md
+      - Create a new doc: create-a-new-doc.md
