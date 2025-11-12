@@ -2,6 +2,7 @@ site_name: APIDocs
 theme:
   name: readthedocs
   navigation_depth: 2
+  toc_depth: 2
 nav:
   - Global Docs APIs: index.md
   - "Authentication and authorization": authentication-and-authorization.md
