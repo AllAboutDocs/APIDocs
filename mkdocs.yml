@@ -9,3 +9,7 @@ nav:
   - "Docs Creation and Management APIs":
       - "Overview": docs-creation-and-management-apis/docs-creation-and-management.md
       - "Create a new doc": docs-creation-and-management-apis/create-a-new-doc.md
+      - "Retrieve a list of docs by external ID": docs-creation-and-management-apis/retrieve-list-of-docs-by-external-id.md
+      - "Retrieve Doc details by Doc ID": docs-creation-and-management-apis/retrieve-doc-details-by-doc-id.md
+      - "Update Doc Status": docs-creation-and-management-apis/update-doc-status.md
+      - "List Doc contents and expiring content by Docs ID": docs-creation-and-management-apis/list-doc-content-and-expiring-content-by-doc-ID.md
