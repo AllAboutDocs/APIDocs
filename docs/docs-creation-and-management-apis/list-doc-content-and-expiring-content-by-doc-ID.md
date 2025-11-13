@@ -1,8 +1,8 @@
-## List Docs contents and expiring contents by Docs ID
+# List Docs contents and expiring contents by Docs ID
 
-This request retrieves the current Docs contents and other contents that will expire soon for a specific Docs ID. The details can be retrieved using the following:
+This request retrieves the current Docs contents and other contents that will expire soon for a specific Docs ID. The details are retrieved using the following:
 
-### Query parameters - Required\*
+**Query parameters - Required\***
 
 - `id` - the unique internal identifier for the Docs
 - `Docs-Entity-ID` - the unique identifier of the third party entity

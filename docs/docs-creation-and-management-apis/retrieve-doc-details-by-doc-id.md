@@ -1,8 +1,8 @@
-## Retrieve Docs details by Docs ID
+# Retrieve Docs details by Docs ID
 
-This request retrieves the details of a specific Docs by the Docs ID. The details can be retrieved using the following:
+This request retrieves the details of a specific Docs by the Docs ID. The details are retrieved using the following:
 
-### Query parameters - Required\*
+\***\*Query parameters - Required\***
 
 - `id` - the unique identifier created by Docs Service for each Docs object
 - `Docs-Entity-ID` - the unique identifier of the third party entity

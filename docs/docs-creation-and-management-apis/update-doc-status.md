@@ -1,4 +1,4 @@
-## Update Docs status
+# Update Docs status
 
 This request updates the Docs status. The various Docs statuses are described below:
 
@@ -10,12 +10,12 @@ This request updates the Docs status. The various Docs statuses are described be
 
 The Docs status is updated using the following:
 
-### Query parameters - Required\*
+**Query parameters - Required\***
 
 - id - the unique internal identifier of the Docs to update
 - Docs-Entity-ID - the unique identifier of the third party entity
 
-### Request Parameters - Required\*
+**Request Parameters - Required\***
 
 - path - the property to be updated, e.g. status
 - op - the operation to be performed, e.g. replace

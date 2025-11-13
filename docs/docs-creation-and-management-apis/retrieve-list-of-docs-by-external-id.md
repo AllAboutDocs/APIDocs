@@ -1,8 +1,8 @@
-## Retrieve a list of docs by external ID
+# Retrieve a list of docs by external ID
 
 This request retrieves the list of docs by external ID. The details can be retrieved using the following:
 
-### Query parameters - Required\*
+**Query parameters - Required\***
 
 - `externalId` - the unique identifier provided by the third party for each Docs object
 - `Docs-Entity-ID` - the unique identifier of the third party entity
