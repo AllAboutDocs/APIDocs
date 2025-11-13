@@ -10,12 +10,12 @@ This endpoint creates a Docs object depending on whether an existing user is ava
 
 - The Create Docs request object **must** contain the following:
 
-### Query Parameters - Required\*
+**Query Parameters - Required\***
 
 - `Docs-Entity-ID` - the unique identifier of the third party entity
 - `X-Idempotency-Key` - the unique server-created key to confirm subsequent retries of the same request
 
-### Request Parameters - Required\*
+**Request Parameters - Required\***
 
 - `type` - the type of the Docs to be created
 - `owner`
