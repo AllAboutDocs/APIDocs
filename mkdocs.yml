@@ -1,6 +1,6 @@
 site_name: APIDocs
 theme:
-  name: readthedocs
+  name: material
   navigation_depth: 2
   toc_depth: 2
 nav:
