@@ -5,8 +5,8 @@ theme:
     - navigation.sections
     - navigation.expand
     - toc.integrate
-  navigation_depth: 2
-  toc_depth: 2
+  navigation_depth: 1
+  toc_depth: 1
   palette:
     primary: indigo
     accent: indigo
