@@ -1,18 +1,11 @@
 site_name: APIDocs
 theme:
-  name: material
-  features:
-    - navigation.sections
-    - navigation.expand
-    - toc.integrate
-  navigation_depth: 1
-  toc_depth: 1
-  palette:
-    primary: indigo
-    accent: indigo
+  name: readthedocs
+  navigation_depth: 2
+  toc_depth: 2
 nav:
   - Global Docs APIs: index.md
-  - Authentication and authorization: authentication-and-authorization.md
-  - Docs Creation and Management APIs:
-      - Overview: docs-creation-and-management-apis/docs-creation-and-management.md
-      - Create a new doc: docs-creation-and-management-apis/create-a-new-doc.md
+  - "Authentication and authorization": authentication-and-authorization.md
+  - "Docs Creation and Management APIs":
+      - "Overview": docs-creation-and-management-apis/docs-creation-and-management.md
+      - "Create a new doc": docs-creation-and-management-apis/create-a-new-doc.md
