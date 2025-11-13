@@ -5,11 +5,11 @@ theme:
     - navigation.sections
     - navigation.expand
     - toc.integrate
+  navigation_depth: 2
+  toc_depth: 2
   palette:
     primary: indigo
     accent: indigo
-  navigation_depth: 2
-  toc_depth: 2
 nav:
   - Global Docs APIs: index.md
   - Authentication and authorization: authentication-and-authorization.md
