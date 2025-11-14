@@ -18,3 +18,5 @@ nav:
       - "Add Lists through Relists or Content Migration": docs-update-via-lists-apis/add-lists-through-relists-or-content-migration.md
       - "Retrieve Doc details by external ID": docs-update-via-lists-apis/retrieve-doc-details-by-external-ID.md
       - "Retrieve Doc details by Docs ID": docs-update-via-lists-apis/retrieve-doc-details-by-doc-ID.md
+      - "Cancel a Specific Doc": docs-update-via-lists-apis/cancel-a-specific-doc.md
+  - "Common Error Responses and their Solutions": common-error-responses-and-their-solutions.md
