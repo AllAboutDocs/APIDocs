@@ -1,7 +1,7 @@
 site_name: APIDocs
 
 theme:
-  name: readthedocs
+  name: material
 
 collapse_navigation: false
 navigation_depth: 4
