@@ -7,9 +7,14 @@ nav:
   - Global Docs APIs: index.md
   - "Authentication and authorization": authentication-and-authorization.md
   - "Docs Creation and Management APIs":
-      - "Overview": docs-creation-and-management-apis/docs-creation-and-management.md
+      - "Overview": docs-creation-and-management-apis/overview.md
       - "Create a new doc": docs-creation-and-management-apis/create-a-new-doc.md
       - "Retrieve a list of docs by external ID": docs-creation-and-management-apis/retrieve-list-of-docs-by-external-id.md
       - "Retrieve Doc details by Doc ID": docs-creation-and-management-apis/retrieve-doc-details-by-doc-id.md
       - "Update Doc Status": docs-creation-and-management-apis/update-doc-status.md
       - "List Doc contents and expiring content by Docs ID": docs-creation-and-management-apis/list-doc-content-and-expiring-content-by-doc-ID.md
+  - "Docs Update via Lists APIs":
+      - "Overview": docs-update-via-lists-apis/overview.md
+      - "Add Lists through Relists or Content Migration": docs-update-via-lists-apis/add-lists-through-relists-or-content-migration.md
+      - "Retrieve Doc details by external ID": docs-update-via-lists-apis/retrieve-doc-details-by-external-ID.md
+      - "Retrieve Doc details by Docs ID": docs-update-via-lists-apis/retrieve-doc-details-by-doc-ID.md
