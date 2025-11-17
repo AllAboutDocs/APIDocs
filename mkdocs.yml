@@ -5,16 +5,12 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
     - toc.integrate
-
-collapse_navigation: false
-navigation_depth: 4
 
 nav:
   - Global Docs APIs: index.md
@@ -37,3 +33,24 @@ nav:
       - Cancel a Specific Doc: docs-update-via-lists-apis/cancel-a-specific-doc.md
 
   - Common Error Responses and their Solutions: common-error-responses-and-their-solutions.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  generator: false
