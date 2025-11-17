@@ -38,11 +38,11 @@ POST
 
 ```JSON
 {
-"type": "full",
-"owner" {
-"type": "User"
-"id": "0f5ly1v7p3gqj5ii56e6k6q61x"
-"externalId": "unique-customer-code"
+  "type": "full",
+  "owner" {
+  "type": "User"
+  "id": "0f5ly1v7p3gqj5ii56e6k6q61x"
+  "externalId": "unique-customer-code"
 }
 }
 ```
@@ -51,10 +51,10 @@ POST
 
 ```JSON
 {
-    "id": "asa0a98d0sa8d0sa9d8saasdsa9",
-    "status": "created | active | locked | terminated",
-    "owner" {
-   "type": "User"
+  "id": "asa0a98d0sa8d0sa9d8saasdsa9",
+  "status": "created | active | locked | terminated",
+  "owner" {
+  "type": "User"
    "id": "0f5ly1v7p3gqj5ii56e6k6q61x"
    "externalId": "unique-customer-code"
  }
