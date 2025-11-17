@@ -2,6 +2,16 @@ site_name: APIDocs
 
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.integrate
 
 collapse_navigation: false
 navigation_depth: 4
