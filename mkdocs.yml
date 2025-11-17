@@ -10,6 +10,8 @@ theme:
     - content.code.annotate
     - content.tabs.link
 
+collapse_navigation: false
+
 nav:
   - Global Docs APIs: index.md
 
