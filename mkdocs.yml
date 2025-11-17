@@ -3,14 +3,12 @@ site_name: APIDocs
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
-    - toc.integrate
 
 nav:
   - Global Docs APIs: index.md
