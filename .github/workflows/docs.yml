@@ -27,7 +27,7 @@ jobs:
       - name: Check links with lychee
         uses: lycheeverse/lychee-action@v1
         with:
-          args: --verbose --no-progress './site/**/*.html'
+          args: --verbose --no-progress --exclude 'fonts.gstatic.com' './site/**/*.html'
           fail: true
 
   spell-check:
