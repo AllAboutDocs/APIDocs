@@ -3,8 +3,6 @@
 This request creates a new Docs account in the Docs ecosystem and establishes a docs container for a user. A user can have one or more docs, each identified by a unique Docs ID, linked user ID, and type.
 This endpoint creates a Docs object depending on whether an existing user is available. The following two scenarios are possible:
 
-Spelling Errors: Usr dos not exiist.
-
 - **User does not exist** - The user will be created in this flow by providing the external user id (third party-side customer code) and then passing the `X-User-Id` value in the header during Docs creation.
 
 - **User already exists** - The Docs is created by providing an internal user Id or owner ID.  

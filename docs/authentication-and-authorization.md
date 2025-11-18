@@ -8,7 +8,7 @@ Every API request requires an authenticated session. The Docs Gateway service pr
 
 - **Scopes** - Scopes provide a way to limit the amount of access that's granted to an access token.
 
-STS ensures that the proper authentication and security measures are in place before interacting with the services that the Docs teams own. Docs STS service provides authentication/authorisation/token management and only the scope is managed by the Global Docs service.
+STS ensures that the proper authentication and security measures are in place before interacting with the services that the Docs teams own. Docs STS service provides authentication/authorization/token management and only the scope is managed by the Global Docs service.
 
 ## Generate token for Docs Gateway STS integration
 

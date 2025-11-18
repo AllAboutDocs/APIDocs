@@ -6,6 +6,6 @@
     "/`[^`]*`/g",
     "/~~~[\\s\\S]*?~~~/g"
   ],
-  "words": ["mkdocs", "API", "APIs", "relists"],
+  "words": ["mkdocs", "API", "APIs", "relists", "Fintech"],
   "ignorePaths": ["node_modules/**", "site/**"]
 }
