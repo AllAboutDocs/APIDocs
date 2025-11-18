@@ -1,0 +1,6 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["mkdocs", "API", "APIs", "relists"],
+  "ignorePaths": ["node_modules/**", "site/**"]
+}
