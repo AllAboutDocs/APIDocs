@@ -1,6 +1,11 @@
 {
   "version": "0.2",
   "language": "en",
+  "ignoreRegExpList": [
+    "/```[\\s\\S]*?```/g",
+    "/`[^`]*`/g",
+    "/~~~[\\s\\S]*?~~~/g"
+  ],
   "words": ["mkdocs", "API", "APIs", "relists"],
   "ignorePaths": ["node_modules/**", "site/**"]
 }
