@@ -63,3 +63,4 @@ jobs:
         with:
           files: docs/
           vale_flags: "--config=.vale.ini"
+          reviewdog: false
