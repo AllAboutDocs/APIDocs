@@ -63,4 +63,5 @@ jobs:
         with:
           files: docs/
           vale_flags: "--config=.vale.ini"
-          reviewdog: false
+          reporter: github-check
+          fail_on_error: false
