@@ -58,9 +58,6 @@ jobs:
           sudo mv vale /usr/local/bin/vale
           vale --version
 
-      - name: Sync Vale styles
-        run: vale sync https://github.com/errata-ai/Microsoft
-
       - name: Run Vale
         uses: errata-ai/vale-action@v2
         with:
