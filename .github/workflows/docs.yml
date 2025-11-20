@@ -42,17 +42,15 @@ jobs:
           incremental_files_only: false
 
   vale-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
-      - name: Install Vale
-        uses: errata-ai/vale-action@v2
-        with:
-          styles: .vale-styles
-          config: .vale.ini
-
-      - name: Run Vale on docs
-        run: vale docs/
+    - name: Run Vale
+      uses: errata-ai/vale-action@v2
+      with:
+        styles: .vale-styles
+        config: .vale.ini
+        files: docs/
