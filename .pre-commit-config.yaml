@@ -1,0 +1,62 @@
+repos:
+  # -----------------------------
+  # Basic sanity checks
+  # -----------------------------
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-json
+      - id: pretty-format-json
+        args: ["--no-sort-keys", "--indent=2"]
+
+  # -----------------------------
+  # Markdown linting (style rules)
+  # -----------------------------
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        args:
+          - "--fix"
+        files: \.(md|markdown)$
+
+  # -----------------------------
+  # Prettier for formatting Markdown, YAML, JSON, HTML
+  # -----------------------------
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier
+        files: \.(md|markdown|yaml|yml|json|html)$
+
+  # -----------------------------
+  # Spell checking (cSpell)
+  # -----------------------------
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.6.1
+    hooks:
+      - id: cspell
+        name: cSpell
+        entry: cspell lint
+        language: node
+        types_or: [markdown]
+        args:
+          - "--config=./cspell.json"
+          - "docs/**/*.md"
+
+  # -----------------------------
+  # Documentation style checks (Vale)
+  # -----------------------------
+  - repo: https://github.com/errata-ai/vale
+    rev: v3.0.0
+    hooks:
+      - id: vale
+        args:
+          - "docs/"
+        additional_dependencies: []
