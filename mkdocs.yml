@@ -15,13 +15,15 @@ nav:
   - Core Concepts:
       - Authentication and authorization: core-concepts/authentication-and-authorization.md
 
-  - Docs Creation and Management APIs:
-      - Overview: docs-creation-and-management-apis/overview.md
-      - Create a new doc: docs-creation-and-management-apis/create-a-new-doc.md
-      - Retrieve a list of docs by external ID: docs-creation-and-management-apis/retrieve-list-of-docs-by-external-id.md
-      - Retrieve Doc details by Doc ID: docs-creation-and-management-apis/retrieve-doc-details-by-doc-id.md
-      - Update Doc Status: docs-creation-and-management-apis/update-doc-status.md
-      - List Doc contents and expiring content by Docs ID: docs-creation-and-management-apis/list-doc-content-and-expiring-content-by-doc-ID.md
+  - Guides
+      - Docs Creation:
+          - Overview: guides/docs-creation/overview.md
+          - Create a new doc: guides/docs-creation/create-a-new-doc.md
+          - Retrieve a list of docs by external ID: guides/docs-creation/retrieve-list-of-docs-by-external-id.md
+          - Retrieve Doc details by Doc ID: guides/docs-creation/retrieve-doc-details-by-doc-id.md
+          - Update Doc Status: guides/docs-creation/update-doc-status.md
+          - List Doc contents and expiring content by Docs ID: guides/docs-creation/list-doc-content-and-expiring-content-by-doc-ID.md     
+
 
   - Docs Update via Lists APIs:
       - Overview: docs-update-via-lists-apis/overview.md
