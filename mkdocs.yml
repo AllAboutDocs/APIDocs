@@ -10,7 +10,7 @@ theme:
     - content.tabs.link
 
 nav:
-  - Home: introduction.md
+  - Home: index.md
 
   - Core Concepts:
       - Authentication and authorization: core-concepts/authentication-and-authorization.md
