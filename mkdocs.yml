@@ -24,6 +24,13 @@ nav:
           - Update Doc Status: guides/docs-creation/update-doc-status.md
           - List Doc contents and expiring content by Docs ID: guides/docs-creation/list-doc-content-and-expiring-content-by-doc-ID.md
 
+      - Docs Update via Lists:
+          - Overview: guides/docs-update-via-lists/overview.md
+          - Add Lists through Relists or Content Migration: guides/docs-update-via-lists/add-lists-through-relists-or-content-migration.md
+          - Retrieve Doc details by external ID: guides/docs-update-via-lists/retrieve-doc-details-by-external-ID.md
+          - Retrieve Doc details by Docs ID: guides/docs-update-via-lists/retrieve-doc-details-by-doc-ID.md
+          - Cancel a Specific Doc: guides/docs-update-via-lists/cancel-a-specific-doc.md
+
   - Docs Update via Lists APIs:
       - Overview: docs-update-via-lists-apis/overview.md
       - Add Lists through Relists or Content Migration: docs-update-via-lists-apis/add-lists-through-relists-or-content-migration.md
