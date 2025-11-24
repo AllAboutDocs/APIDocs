@@ -10,9 +10,10 @@ theme:
     - content.tabs.link
 
 nav:
-  - Global Docs APIs: index.md
+  - Home: introduction.md
 
-  - Authentication and authorization: authentication-and-authorization.md
+  - Core Concepts:
+      - Authentication and authorization: core-concepts/authentication-and-authorization.md
 
   - Docs Creation and Management APIs:
       - Overview: docs-creation-and-management-apis/overview.md
