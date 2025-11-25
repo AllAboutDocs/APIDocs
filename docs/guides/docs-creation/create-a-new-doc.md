@@ -67,7 +67,7 @@ Use this endpoint when onboarding new users or provisioning additional Docs cont
 
 ---
 
-## Overview
+** Overview**
 
 A Docs object represents a user's document container.  
 When you call this endpoint:
@@ -83,7 +83,7 @@ You must provide **either**:
 
 ---
 
-## When You Should Use This Endpoint
+**When You Should Use This Endpoint**
 
 Use this API when:
 
@@ -94,7 +94,7 @@ Use this API when:
 
 ---
 
-## Prerequisites
+**Prerequisites**
 
 Ensure you have the following before making a request:
 
@@ -107,7 +107,7 @@ Ensure you have the following before making a request:
 
 ---
 
-## Step 1: Add Required Headers
+**Step 1: Add Required Headers**
 
 | Header              | Required | Description                      |
 | ------------------- | -------- | -------------------------------- |
@@ -116,14 +116,14 @@ Ensure you have the following before making a request:
 
 ---
 
-## Step 2: Build the Request Body
+**Step 2: Build the Request Body**
 
 Your JSON must include:
 
 - The Docs `type`
 - One identifier: `owner.id` or `externalId`
 
-### Example
+**Example**
 
 ```json
 {
