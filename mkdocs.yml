@@ -14,6 +14,7 @@ nav:
 
   - Core Concepts:
       - Authentication and authorization: core-concepts/authentication-and-authorization.md
+      - Common Error Responses and their Solutions: core-concepts/common-error-responses-and-their-solutions.md
 
   - Guides:
       - Docs Creation:
@@ -31,14 +32,19 @@ nav:
           - Retrieve Doc details by Docs ID: guides/docs-update-via-lists/retrieve-doc-details-by-doc-ID.md
           - Cancel a Specific Doc: guides/docs-update-via-lists/cancel-a-specific-doc.md
 
-  - Docs Update via Lists APIs:
-      - Overview: docs-update-via-lists-apis/overview.md
-      - Add Lists through Relists or Content Migration: docs-update-via-lists-apis/add-lists-through-relists-or-content-migration.md
-      - Retrieve Doc details by external ID: docs-update-via-lists-apis/retrieve-doc-details-by-external-ID.md
-      - Retrieve Doc details by Docs ID: docs-update-via-lists-apis/retrieve-doc-details-by-doc-ID.md
-      - Cancel a Specific Doc: docs-update-via-lists-apis/cancel-a-specific-doc.md
+    - API Reference:
+        - Docs:
+            - Create: api/docs/create.md
+            - List by External ID: api/docs/list-by-external-id.md
+            - Get by ID: api/docs/get-by-id.md
+            - Update Status: api/docs/update-status.md
+            - List Content: api/docs/list-content.md
 
-  - Common Error Responses and their Solutions: common-error-responses-and-their-solutions.md
+        - Lists:
+            - Add Lists: api/lists/add-lists.md
+            - Get Details (External ID): api/lists/get-details-external-id.md
+            - Get Details (Doc ID): api/lists/get-details-doc-id.md
+            - Cancel Doc: api/lists/cancel-doc.md
 
 markdown_extensions:
   - admonition

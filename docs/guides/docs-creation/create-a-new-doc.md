@@ -61,3 +61,78 @@ POST
 }
 
 ```
+
+# Create a New Doc — Guide
+
+This guide explains how to create a new Docs object within the Docs ecosystem.  
+Use this endpoint when onboarding new users or provisioning additional Docs containers for existing ones.
+
+---
+
+## Overview
+
+A Docs object represents a user's document container.  
+When you call this endpoint:
+
+- If the **user does not exist**, a new user is created automatically using `externalId`.
+- If the **user exists**, the Docs object links to an existing `owner.id`.
+
+You must provide **either**:
+
+- `owner.id`  
+  **or**
+- `externalId`
+
+---
+
+## When You Should Use This Endpoint
+
+Use this API when:
+
+- onboarding a new customer
+- creating a Docs container for an existing customer
+- linking third-party customer identifiers using `externalId`
+- setting up onboarding flows that require Docs
+
+---
+
+## Prerequisites
+
+Ensure you have the following before making a request:
+
+- `Docs-Entity-ID` header
+- `X-Idempotency-Key` header
+- Docs type (`type`)
+- One of:
+  - `owner.id`
+  - or `externalId`
+
+---
+
+## Step 1: Add Required Headers
+
+| Header              | Required | Description                      |
+| ------------------- | -------- | -------------------------------- |
+| `Docs-Entity-ID`    | Yes      | Unique identifier of your entity |
+| `X-Idempotency-Key` | Yes      | Prevents duplicate creations     |
+
+---
+
+## Step 2: Build the Request Body
+
+Your JSON must include:
+
+- The Docs `type`
+- One identifier: `owner.id` or `externalId`
+
+### Example
+
+```json
+{
+  "type": "full",
+  "owner": {
+    "id": "0f5ly1v7p3gqj5ii56e6k6q61x",
+    "externalId": "unique-customer-code"
+  }
+}
+```
