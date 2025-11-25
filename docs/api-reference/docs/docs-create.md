@@ -43,6 +43,7 @@ At least one of owner.id or owner.externalId is required.
 
 **Example Request**
 
+```cURL
 curl -X POST "{BASE_URL}/v1/docs" \
  -H "Docs-Entity-ID: 12345" \
  -H "X-Idempotency-Key: 9c8c-123abc-99" \
@@ -54,9 +55,11 @@ curl -X POST "{BASE_URL}/v1/docs" \
 "externalId": "unique-customer-code"
 }
 }'
+```
 
 **Example Success Response — 201**
 
+```cURL
 {
 "id": "asa0a98d0sa8d0sa9d8saasdsa9",
 "status": "created",
@@ -65,6 +68,7 @@ curl -X POST "{BASE_URL}/v1/docs" \
 "externalId": "unique-customer-code"
 }
 }
+```
 
 **Status Codes**
 
@@ -77,6 +81,8 @@ curl -X POST "{BASE_URL}/v1/docs" \
 | **422 Unprocessable Entity** | Invalid request payload                   |
 
 **Error Response Structure**
+
+```JSON
 {
 "error": {
 "code": "string",
@@ -84,6 +90,7 @@ curl -X POST "{BASE_URL}/v1/docs" \
 "details": {}
 }
 }
+```
 
 ** Common Errors**
 
@@ -98,3 +105,7 @@ Triggered when the same X-Idempotency-Key is reused intentionally or accidentall
 - `422` — Invalid Data Format
 
 Occurs when IDs or values do not meet schema requirements.
+
+```
+
+```
