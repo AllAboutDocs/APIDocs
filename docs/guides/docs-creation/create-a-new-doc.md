@@ -62,8 +62,6 @@ POST
 
 ```
 
-# Create a New Doc — Guide
-
 This guide explains how to create a new Docs object within the Docs ecosystem.  
 Use this endpoint when onboarding new users or provisioning additional Docs containers for existing ones.
 
