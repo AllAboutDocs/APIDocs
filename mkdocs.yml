@@ -40,7 +40,7 @@ nav:
       #          - Update Status: api/docs/update-status.md
       #          - List Content: api/docs/list-content.md
 
-      - Lists:
+#      - Lists:
 #         - Add Lists: api/lists/add-lists.md
 #          - Get Details (External ID): api/lists/get-details-external-id.md
 #          - Get Details (Doc ID): api/lists/get-details-doc-id.md
