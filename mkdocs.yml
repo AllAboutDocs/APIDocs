@@ -35,16 +35,16 @@ nav:
   - API Reference:
       - Docs:
           - Create: api-reference/docs/docs-create.md
-          - List by External ID: api/docs/list-by-external-id.md
-          - Get by ID: api/docs/get-by-id.md
-          - Update Status: api/docs/update-status.md
-          - List Content: api/docs/list-content.md
+      #          - List by External ID: api/docs/list-by-external-id.md
+      #          - Get by ID: api/docs/get-by-id.md
+      #          - Update Status: api/docs/update-status.md
+      #          - List Content: api/docs/list-content.md
 
       - Lists:
-          - Add Lists: api/lists/add-lists.md
-          - Get Details (External ID): api/lists/get-details-external-id.md
-          - Get Details (Doc ID): api/lists/get-details-doc-id.md
-          - Cancel Doc: api/lists/cancel-doc.md
+#         - Add Lists: api/lists/add-lists.md
+#          - Get Details (External ID): api/lists/get-details-external-id.md
+#          - Get Details (Doc ID): api/lists/get-details-doc-id.md
+#          - Cancel Doc: api/lists/cancel-doc.md
 
 markdown_extensions:
   - admonition
