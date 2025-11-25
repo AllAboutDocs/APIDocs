@@ -1,7 +1,7 @@
 # Create a New Doc — API Reference
 
 Creates a new Docs object for a user in the Docs ecosystem.  
-If a user does not exist, supplying `externalId` automatically creates the user before provisioning the Docs object.
+If a user doesn't exist, supplying `externalId` automatically creates the user before provisioning the Docs object.
 
 ---
 
