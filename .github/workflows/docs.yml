@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build docs
-        run: mkdocs build
+        run: mkdocs build --strict
 
       - name: Check links with lychee
         uses: lycheeverse/lychee-action@v1
