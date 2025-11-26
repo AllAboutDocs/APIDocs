@@ -92,7 +92,7 @@ curl -X POST "{BASE_URL}/v1/docs" \
 }
 ```
 
-** Common Errors**
+**Common Errors**
 
 - `400` — Missing Required Fields
 
@@ -105,7 +105,3 @@ Triggered when the same X-Idempotency-Key is reused intentionally or accidentall
 - `422` — Invalid Data Format
 
 Occurs when IDs or values do not meet schema requirements.
-
-```
-
-```
