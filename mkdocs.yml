@@ -36,10 +36,11 @@ nav:
   - API Reference:
       - Docs:
           - Docs Create: api-reference/docs/docs-create.md
+          - List Content: api-reference/docs/docs-contents-list.md
       #          - List by External ID: api/docs/list-by-external-id.md
       #          - Get by ID: api/docs/get-by-id.md
       #          - Update Status: api/docs/update-status.md
-      #          - List Content: api/docs/list-content.md
+      #          -
 
 #      - Lists:
 #         - Add Lists: api/lists/add-lists.md
