@@ -21,8 +21,8 @@ nav:
           - Overview: guides/docs-creation/overview.md
           - Create a new doc: guides/docs-creation/create-a-new-doc.md
           - List Doc contents and expiring content by Docs ID: guides/docs-creation/list-doc-content-and-expiring-content-by-doc-ID.md
-          - Retrieve a list of docs by external ID: guides/docs-creation/retrieve-list-of-docs-by-external-id.md
           - Retrieve Doc details by Doc ID: guides/docs-creation/retrieve-doc-details-by-doc-id.md
+          - Retrieve a list of docs by external ID: guides/docs-creation/retrieve-list-of-docs-by-external-id.md
           - Update Doc Status: guides/docs-creation/update-doc-status.md
 
       - Docs Update via Lists:
@@ -37,7 +37,7 @@ nav:
       - Docs:
           - Create a new Doc - API: api-reference/docs/docs-create.md
           - List doc content and expiring content by doc ID - API: api-reference/docs/docs-contents-list-by-doc-id.md
-          - Retrieve doc details by doc ID: api-reference/docs/retrieve-doc-details-by-doc-id
+          - Retrieve doc details by doc ID: api-reference/docs/docs-details-retrieve-by-doc-id
           -
 
 #      - Lists:
