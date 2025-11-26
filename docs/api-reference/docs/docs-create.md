@@ -24,13 +24,8 @@ POST /v1/docs
 **Request Body Schema**
 
 ```json
-{
-  "type": "string",
-  "owner": {
-    "id": "string",
-    "externalId": "string"
-  }
-}
+curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807" \
+  -H "Docs-Entity-ID: 12345"
 ```
 
 At least one of owner.id or owner.externalId is required.

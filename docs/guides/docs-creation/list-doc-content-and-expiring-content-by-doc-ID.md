@@ -2,52 +2,6 @@
 
 This request retrieves the current Docs contents and other contents that will expire soon for a specific Docs ID. The details are retrieved using the following:
 
-**URL**
-
-`{URL}/v1/docs/{id}/contents`
-
-**METHOD**
-
-GET
-
-**SUCCESS RESPONSE**
-
-200: The Docs contents details are displayed.
-
-**SAMPLE RESPONSE**
-
-```JSON
-{
-  "id": "0f5w7ir5wcqj8ydeih3wpv0807",
-  "aggregatedcontents": {
-    "primary": {
-      "type": "SAR",
-      "value": 5
-    }
-  },
-  "accounts": [
-    {
-      "accountType": "string",
-      "contents": {
-        "type": "SAR",
-        "value": 5
-      },
-      "expiringcontents": [
-        {
-          "amount": {
-            "type": "SAR",
-            "value": 5
-          },
-          "expirationDateTime": "2023-12-12T10:16:38Z"
-        }
-      ]
-    }
-  ]
-}
-```
-
-This request retrieves the current Docs contents and other contents that will expire soon for a specific Docs ID. The details are retrieved using the following:
-
 Each Docs object contains one or more content records associated with user activity.  
 This endpoint allows you to:
 

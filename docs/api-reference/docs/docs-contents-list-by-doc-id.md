@@ -18,7 +18,7 @@ GET /v1/docs/{id}/contents
 
 ---
 
-**Query Parameters**
+**Headers**
 
 | Header           | Required | Type   | Description                   |
 | ---------------- | -------- | ------ | ----------------------------- |
@@ -28,7 +28,7 @@ GET /v1/docs/{id}/contents
 
 **Example Request**
 
-```bash
+```cURL
 curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807/contents" \
   -H "Docs-Entity-ID: 12345"
 ```
@@ -89,8 +89,8 @@ curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807/contents" \
 
 **Common Errors**
 
-`400` — Bad Request
-Occurs when the Doc ID format is invalid or required path parameters are missing
+- `400` — Bad Request
+  Occurs when the Doc ID format is invalid or required path parameters are missing
 
-`422` — Unprocessable Entity
-Occurs when the Doc ID does not match the expected schema
+- `422` — Unprocessable Entity
+  Occurs when the Doc ID does not match the expected schema
