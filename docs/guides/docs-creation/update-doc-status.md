@@ -1,6 +1,6 @@
 # Update Docs status
 
-This request updates the Docs status. The various Docs statuses are described below:
+This request updates the Docs status. Each Doc in the Docs ecosystem operates under a specific status that determines its availability and behavior. This endpoint allows you to change the status of a Doc using a PATCH operation. The various Docs statuses are described below:
 
 - **Active** - The Docs account is active and is fully operational. All Docs activity is operational.
 
@@ -8,7 +8,22 @@ This request updates the Docs status. The various Docs statuses are described be
 
 - **Blocked** - The Docs account is blocked and is fully non-operational.
 
-The Docs status is updated using the following:
+---
+
+**When to Use This Endpoint**
+
+Use this API when you need to:
+
+- Activate a newly created Doc
+- Temporarily suspend a Doc
+- Block access to a Doc for compliance or security reasons
+- Resume Doc operations after review
+
+---
+
+**Prerequisites**
+
+Before updating a Doc’s status, ensure you have:
 
 **Query parameters - Required\***
 
@@ -20,41 +35,3 @@ The Docs status is updated using the following:
 - path - the property to be updated, e.g. status
 - op - the operation to be performed, e.g. replace
 - value - the status to be applied, e.g. block
-
-**URL**
-
-`{URL}/v1/docs/{id}`
-
-**METHOD**
-
-PATCH
-
-**SUCCESS RESPONSE**
-
-200: The Docs status is updated.
-
-**SAMPLE REQUEST**
-
-```JSON
-[
-{
-"path": "/status",
-"op": "replace",
-"value": "block"
-}
-]
-```
-
-**_SAMPLE RESPONSE_**
-
-```JSON
-{
-"id": "0f5w7ir5wcqj8ydeih3wpv0807",
-"status": "Created",
-"owner": {
-"id": "0f5w7ir5wcqj8ydeih3wpv0807",
-"type": "User",
-"externalId": "sample"
-}
-}
-```

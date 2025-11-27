@@ -35,7 +35,7 @@ curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807" \
 
 **Example Success Response — 200 OK**
 
-```cURL
+```JSON
 {
   "id": "0f5w7ir5wcqj8ydeih3wpv0807",
   "status": "Created",

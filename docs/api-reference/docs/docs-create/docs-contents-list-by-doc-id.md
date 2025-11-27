@@ -28,14 +28,14 @@ GET /v1/docs/{id}/contents
 
 **Example Request**
 
-```cURL
+```JSON
 curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807/contents" \
   -H "Docs-Entity-ID: 12345"
 ```
 
 **Example Success Response — 200 OK**
 
-```cURL
+```JSON
 {
   "id": "0f5w7ir5wcqj8ydeih3wpv0807",
   "aggregatedcontents": {

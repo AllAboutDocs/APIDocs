@@ -23,7 +23,7 @@ POST /v1/docs
 
 **Request Body Schema**
 
-```json
+```JSON
 curl -X GET "{BASE_URL}/v1/docs/0f5w7ir5wcqj8ydeih3wpv0807" \
   -H "Docs-Entity-ID: 12345"
 ```
@@ -38,7 +38,7 @@ At least one of owner.id or owner.externalId is required.
 
 **Example Request**
 
-```cURL
+```JSON
 curl -X POST "{BASE_URL}/v1/docs" \
  -H "Docs-Entity-ID: 12345" \
  -H "X-Idempotency-Key: 9c8c-123abc-99" \
@@ -54,7 +54,7 @@ curl -X POST "{BASE_URL}/v1/docs" \
 
 **Example Success Response — 201**
 
-```cURL
+```JSON
 {
 "id": "asa0a98d0sa8d0sa9d8saasdsa9",
 "status": "created",
