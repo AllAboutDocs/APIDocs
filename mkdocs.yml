@@ -34,9 +34,9 @@ nav:
 
   - API Reference:
       - Docs:
-          - Create a new Doc - API: api-reference/docs/docs-create.md
-          - List doc content and expiring content by doc ID - API: api-reference/docs/docs-contents-list-by-doc-id.md
-          - Retrieve doc details by doc ID - API: api-reference/docs/docs-details-retrieve-by-doc-id.md
+          - Create a new Doc - API: api-reference/docs/docs-create/new-doc-create.md
+          - List doc content and expiring content by doc ID - API: api-reference/docs/docs-create/docs-contents-list-by-doc-id.md
+          - Retrieve doc details by doc ID - API: api-reference/docs/docs-create/docs-details-retrieve-by-doc-id.md
 
 #      - Lists:
 #         - Add Lists: api/lists/add-lists.md

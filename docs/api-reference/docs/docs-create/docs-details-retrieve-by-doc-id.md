@@ -4,7 +4,7 @@ Retrieves the complete details of a specific Doc using its internal Doc ID.
 
 ---
 
-** Endpoint**
+**Endpoint**
 
 GET /v1/docs/{id}
 
