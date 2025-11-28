@@ -1,6 +1,32 @@
 # Add Lists through Relists or Contents Migration
 
-This request adds lists to an existing customer Docs account via relists or contents migrations. The Add lists request object **must** contain the following:
+This request adds lists to an existing customer Docs account via relists or contents migrations. This endpoint credits lists to a customer's Docs account as part of:
+
+- A **relist/revert operation**, or
+- A **contents migration operation**
+
+Each request records:
+
+- The update source (manual or online)
+- The amount credited
+- A reference ID for reconciliation and reporting
+
+---
+
+**When to Use This Endpoint**
+
+Use this API when you need to:
+
+- Credit lists after an **order revert**
+- Migrate contents from another system into Docs
+- Adjust customer balances due to operational corrections
+- Track Docs updates for reconciliation and reporting
+
+---
+
+**Prerequisites**
+
+Ensure you have the following before making a request:
 
 **Query Parameters - Required\***
 

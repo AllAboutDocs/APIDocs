@@ -27,10 +27,7 @@ nav:
       - Docs Update via Lists:
           - Overview: guides/docs-update-via-lists/overview.md
           - Add Lists through Relists or Content Migration: guides/docs-update-via-lists/add-lists-through-relists-or-content-migration.md
-          - Retrieve Doc details by external ID: guides/docs-update-via-lists/retrieve-doc-details-by-external-ID.md
-          - Retrieve Doc details by Docs ID: guides/docs-update-via-lists/retrieve-doc-details-by-doc-ID.md
           - Cancel a Specific Doc: guides/docs-update-via-lists/cancel-a-specific-doc.md
-          - Docs Create: api-reference/docs/docs-create.md
 
   - API Reference:
       - Docs:
@@ -39,11 +36,8 @@ nav:
           - Retrieve doc details by doc ID: api-reference/docs/docs-create/docs-details-retrieve-by-doc-id.md
           - Update Doc Status: api-reference/docs/docs-create/docs-status-update.md
 
-#      - Lists:
-#         - Add Lists: api/lists/add-lists.md
-#          - Get Details (External ID): api/lists/get-details-external-id.md
-#          - Get Details (Doc ID): api/lists/get-details-doc-id.md
-#          - Cancel Doc: api/lists/cancel-doc.md
+      - Lists:
+          - Add Lists through Relists or Content Migration: api-reference/docs/lists-update/lists-add-relists-content-migration.md
 
 markdown_extensions:
   - admonition
