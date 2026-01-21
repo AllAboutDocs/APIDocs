@@ -1,4 +1,4 @@
-# Add Lists through Relists or Contents Migration — API Reference
+# Add Lists through Relists or Contents Migration
 
 Adds lists to an existing Docs account through:
 
