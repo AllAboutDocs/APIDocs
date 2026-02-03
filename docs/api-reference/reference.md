@@ -1,3 +1,7 @@
-## API Reference
+# API Reference
 
-{% redoc "openapi.yaml" %}
+::: swagger-ui
+spec_url: openapi.yaml
+layout: BaseLayout
+deepLinking: true
+:::
