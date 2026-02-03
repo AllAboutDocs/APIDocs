@@ -1,3 +1,1 @@
-## API Endpoints
-
-{% redoc "openapi.yaml" %}
+Test intro
