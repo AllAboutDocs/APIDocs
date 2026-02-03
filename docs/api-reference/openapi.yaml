@@ -1,0 +1,499 @@
+openapi: 3.0.3
+info:
+  title: Docs API
+  description: API for managing Docs objects and their contents in the Docs ecosystem
+  version: 1.0.0
+  contact:
+    name: API Support
+servers:
+  - url: https://api.example.com
+    description: Production server
+    variables:
+      BASE_URL:
+        default: https://api.example.com
+        description: Base URL for API endpoints
+
+security:
+  - DocsEntityID: []
+
+paths:
+  /v1/docs:
+    post:
+      summary: Create a New Doc
+      description: Creates a new Docs object for a user in the Docs ecosystem. If a user doesn't exist, supplying externalId automatically creates the user before provisioning the Docs object.
+      operationId: createDoc
+      tags:
+        - Docs Management
+      parameters:
+        - $ref: "#/components/parameters/DocsEntityID"
+        - $ref: "#/components/parameters/IdempotencyKey"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateDocRequest"
+            examples:
+              withId:
+                summary: Create with owner ID
+                value:
+                  type: full
+                  owner:
+                    id: 0f5ly1v7p3gqj5ii56e6k6q61x
+              withExternalId:
+                summary: Create with external ID
+                value:
+                  type: full
+                  owner:
+                    externalId: unique-customer-code
+              withBoth:
+                summary: Create with both IDs
+                value:
+                  type: full
+                  owner:
+                    id: 0f5ly1v7p3gqj5ii56e6k6q61x
+                    externalId: unique-customer-code
+      responses:
+        "201":
+          description: Docs object successfully created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocResponse"
+              example:
+                id: asa0a98d0sa8d0sa9d8saasdsa9
+                status: created
+                owner:
+                  id: 0f5ly1v7p3gqj5ii56e6k6q61x
+                  externalId: unique-customer-code
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+
+  /v1/docs/{id}:
+    get:
+      summary: Retrieve Doc Details by Doc ID
+      description: Retrieves the complete details of a specific Doc using its internal Doc ID.
+      operationId: getDocById
+      tags:
+        - Docs Management
+      parameters:
+        - $ref: "#/components/parameters/DocId"
+        - $ref: "#/components/parameters/DocsEntityID"
+      responses:
+        "200":
+          description: Doc successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocDetailsResponse"
+              example:
+                id: 0f5w7ir5wcqj8ydeih3wpv0807
+                status: Created
+                owner:
+                  id: 0f5w7ir5wcqj8ydeih3wpv0807
+                  type: User
+                  externalId: sample
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+    patch:
+      summary: Update Doc Status
+      description: Updates the status of an existing Doc using its internal Doc ID. The request uses JSON Patch format.
+      operationId: updateDocStatus
+      tags:
+        - Docs Management
+      parameters:
+        - $ref: "#/components/parameters/DocId"
+        - $ref: "#/components/parameters/DocsEntityID"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/JsonPatchOperation"
+            example:
+              - path: /status
+                op: replace
+                value: block
+      responses:
+        "200":
+          description: Doc status successfully updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocDetailsResponse"
+              example:
+                id: 0f5w7ir5wcqj8ydeih3wpv0807
+                status: block
+                owner:
+                  id: 0f5w7ir5wcqj8ydeih3wpv0807
+                  type: User
+                  externalId: sample
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+
+  /v1/docs/{id}/contents:
+    get:
+      summary: List Doc Contents and Expiring Contents
+      description: Retrieves the current contents and expiring contents associated with a specific Doc using its internal Doc ID.
+      operationId: getDocContents
+      tags:
+        - Doc Contents
+      parameters:
+        - $ref: "#/components/parameters/DocId"
+        - $ref: "#/components/parameters/DocsEntityID"
+      responses:
+        "200":
+          description: Contents successfully retrieved
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocContentsResponse"
+              example:
+                id: 0f5w7ir5wcqj8ydeih3wpv0807
+                aggregatedcontents:
+                  primary:
+                    type: SAR
+                    value: 5
+                accounts:
+                  - accountType: savings
+                    contents:
+                      type: SAR
+                      value: 5
+                    expiringcontents:
+                      - amount:
+                          type: SAR
+                          value: 5
+                        expirationDateTime: "2023-12-12T10:16:38Z"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+
+components:
+  parameters:
+    DocId:
+      name: id
+      in: path
+      required: true
+      description: Internal unique identifier of the Doc
+      schema:
+        type: string
+      example: 0f5w7ir5wcqj8ydeih3wpv0807
+
+    DocsEntityID:
+      name: Docs-Entity-ID
+      in: header
+      required: true
+      description: Unique identifier of the third-party entity
+      schema:
+        type: string
+      example: "12345"
+
+    IdempotencyKey:
+      name: X-Idempotency-Key
+      in: header
+      required: true
+      description: Used to safely retry the same request
+      schema:
+        type: string
+      example: 9c8c-123abc-99
+
+  schemas:
+    CreateDocRequest:
+      type: object
+      required:
+        - type
+        - owner
+      properties:
+        type:
+          type: string
+          description: Type of Docs object to create
+          example: full
+        owner:
+          type: object
+          description: Owner information (at least one of id or externalId is required)
+          properties:
+            id:
+              type: string
+              description: Internal user ID (required if externalId is not provided)
+              example: 0f5ly1v7p3gqj5ii56e6k6q61x
+            externalId:
+              type: string
+              description: External user identifier (required if id is not provided)
+              example: unique-customer-code
+          anyOf:
+            - required: [id]
+            - required: [externalId]
+
+    DocResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the created Doc
+          example: asa0a98d0sa8d0sa9d8saasdsa9
+        status:
+          type: string
+          description: Current status of the Doc
+          example: created
+        owner:
+          $ref: "#/components/schemas/Owner"
+
+    DocDetailsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the Doc
+          example: 0f5w7ir5wcqj8ydeih3wpv0807
+        status:
+          type: string
+          description: Current status of the Doc
+          enum: [Created, active, pending, block]
+          example: Created
+        owner:
+          allOf:
+            - $ref: "#/components/schemas/Owner"
+            - type: object
+              properties:
+                type:
+                  type: string
+                  example: User
+
+    Owner:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal owner ID
+          example: 0f5ly1v7p3gqj5ii56e6k6q61x
+        externalId:
+          type: string
+          description: External owner identifier
+          example: unique-customer-code
+
+    JsonPatchOperation:
+      type: object
+      required:
+        - path
+        - op
+        - value
+      properties:
+        path:
+          type: string
+          description: Property to update
+          example: /status
+        op:
+          type: string
+          description: Operation to perform
+          enum: [replace]
+          example: replace
+        value:
+          type: string
+          description: New value for the property
+          enum: [active, pending, block]
+          example: block
+
+    DocContentsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the Doc
+          example: 0f5w7ir5wcqj8ydeih3wpv0807
+        aggregatedcontents:
+          type: object
+          properties:
+            primary:
+              $ref: "#/components/schemas/ContentAmount"
+        accounts:
+          type: array
+          items:
+            $ref: "#/components/schemas/Account"
+
+    Account:
+      type: object
+      properties:
+        accountType:
+          type: string
+          description: Type of account
+          example: savings
+        contents:
+          $ref: "#/components/schemas/ContentAmount"
+        expiringcontents:
+          type: array
+          items:
+            $ref: "#/components/schemas/ExpiringContent"
+
+    ContentAmount:
+      type: object
+      properties:
+        type:
+          type: string
+          description: Currency or content type
+          example: SAR
+        value:
+          type: number
+          description: Amount value
+          example: 5
+
+    ExpiringContent:
+      type: object
+      properties:
+        amount:
+          $ref: "#/components/schemas/ContentAmount"
+        expirationDateTime:
+          type: string
+          format: date-time
+          description: ISO 8601 datetime when content expires
+          example: "2023-12-12T10:16:38Z"
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              description: Error code
+              example: INVALID_REQUEST
+            message:
+              type: string
+              description: Human-readable error message
+              example: Missing required fields
+            details:
+              type: object
+              description: Additional error details
+              additionalProperties: true
+
+  responses:
+    BadRequest:
+      description: Bad Request - Missing or invalid fields
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: BAD_REQUEST
+              message: Missing required fields
+              details: {}
+
+    Unauthorized:
+      description: Unauthorized - Authentication failure
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: UNAUTHORIZED
+              message: Authentication failed
+              details: {}
+
+    Forbidden:
+      description: Forbidden - Access denied
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: FORBIDDEN
+              message: Access denied
+              details: {}
+
+    NotFound:
+      description: Not Found - Doc ID not found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: NOT_FOUND
+              message: Doc ID not found
+              details: {}
+
+    Conflict:
+      description: Conflict - Duplicate creation due to idempotency key
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: CONFLICT
+              message: Duplicate request
+              details: {}
+
+    UnprocessableEntity:
+      description: Unprocessable Entity - Invalid request payload
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: UNPROCESSABLE_ENTITY
+              message: Invalid data format
+              details: {}
+
+    InternalServerError:
+      description: Internal Server Error - Server failure
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error:
+              code: INTERNAL_SERVER_ERROR
+              message: Server failure
+              details: {}
+
+  securitySchemes:
+    DocsEntityID:
+      type: apiKey
+      in: header
+      name: Docs-Entity-ID
+      description: Third-party entity identifier required for all requests
+
+tags:
+  - name: Docs Management
+    description: Operations for creating and managing Docs objects
+  - name: Doc Contents
+    description: Operations for retrieving Doc contents and expiring contents

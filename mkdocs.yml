@@ -30,6 +30,8 @@ nav:
           - Cancel a Specific Doc: guides/docs-update-via-lists/cancel-a-specific-doc.md
 
   - API Reference:
+      - Reference:
+          - api-reference/generated
       - Docs:
           - Create a new Doc: api-reference/docs/docs-create/docs-create.md
           - List doc content and expiring content by doc ID: api-reference/docs/docs-create/docs-contents-list-by-doc-id.md
@@ -62,6 +64,10 @@ extra:
 
 plugins:
   - search
+  - openapi:
+      spec: api-reference/openapi.yaml
+      output_dir: api-reference/generated
+      grouping: tags
   - awesome-pages
   - glightbox
   - minify:
