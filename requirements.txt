@@ -1,6 +1,6 @@
 mkdocs
 mkdocs-material
-mkdocs-openapi-plugin
+mkdocs-redoc-tag
 mkdocs-awesome-pages-plugin
 mkdocs-glightbox
 mkdocs-minify-plugin
