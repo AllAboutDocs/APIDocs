@@ -45,6 +45,7 @@ markdown_extensions:
   - attr_list
   - def_list
   - md_in_html
+  - jinja2
   - toc:
       permalink: true
       toc_depth: 2
