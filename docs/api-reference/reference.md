@@ -1,7 +1,7 @@
 # API Reference
 
-::: swagger-ui
-spec_url: openapi.yaml
-layout: BaseLayout
-deepLinking: true
-:::
+Our complete API documentation is available below.
+
+{{ swagger }}
+
+<swagger-ui src="api/openapi.yaml"/>

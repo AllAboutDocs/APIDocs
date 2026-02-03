@@ -64,7 +64,8 @@ extra:
 
 plugins:
   - search
-  - swagger-ui-tag
+  - swagger:
+      swagger_file: docs/api/openapi.yaml
   - awesome-pages
   - glightbox
   - minify:
