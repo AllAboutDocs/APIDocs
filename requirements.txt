@@ -1,5 +1,6 @@
 mkdocs
 mkdocs-material
+mkdocs-swagger-ui-tag
 mkdocs-awesome-pages-plugin
 mkdocs-glightbox
 mkdocs-minify-plugin
