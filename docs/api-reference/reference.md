@@ -1,7 +1,3 @@
-# API Reference
-
-Our complete API documentation is available below.
-
-{{ swagger }}
+# API Reference - Swagger UI
 
 <swagger-ui src="openapi.yaml">
